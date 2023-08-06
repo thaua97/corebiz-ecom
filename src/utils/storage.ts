@@ -1,4 +1,4 @@
-import { ProductInterface } from "./interfaces"
+import { ProductInterface } from "../types/interfaces"
 
 export function SaveLocalCart (item: ProductInterface[])  {
   return localStorage.LOCAL_CART = JSON.stringify(item);
