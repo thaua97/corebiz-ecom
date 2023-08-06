@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import background from './colors';
+import { theme } from './theme';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
@@ -22,7 +22,7 @@ export default createGlobalStyle`
 
     body {
         -webkit-font-smoothing: antialiased;
-        background-color: ${background} ;
+        background-color: ${theme.colors.background} ;
     }
 
     body, input, button {
@@ -39,5 +39,6 @@ export default createGlobalStyle`
 
     button {
         cursor: pointer;
+        border: 0;
     }
 `;

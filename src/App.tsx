@@ -4,10 +4,6 @@ import {
   Route
 } from "react-router-dom";
 
-import { ToastContainer } from 'react-toastify';
-
-import GlobalStyles from './styles/global';
-
 import Home from './pages/Home';
 
 function App() {
@@ -16,8 +12,6 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
       </Routes>
-      <GlobalStyles />
-      <ToastContainer autoClose={3000} />
     </>
   )
 }
