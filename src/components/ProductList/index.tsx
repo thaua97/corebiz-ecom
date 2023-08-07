@@ -6,9 +6,12 @@ import { Button } from '../Button';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdStar, MdStarOutline } from 'react-icons/md';
 import Rating from '@mui/material/Rating';
 import { formatMoney } from '../../utils/formater';
+import { SaveLocalCart, getLocalCart } from '../../utils/storage';
+import { ProductsInterface } from '../../types/interfaces';
 
 export default function ListItens () {
   const { products } = useProducts();
+ 
   const carroseul = useRef(null);
 
   const handleLeftClick = () => {
@@ -18,6 +21,12 @@ export default function ListItens () {
   const handleRighClick = () => {
     carroseul.current.scrollLeft += carroseul.current.offsetWidth;
   }
+
+  const addToCart = (item: ProductsInterface) => {
+    const cart = getLocalCart();
+    SaveLocalCart([ ...cart, item]);
+  };
+
   return (
     <ListWrapper>
       <Heading>Mais vendidos</Heading>
@@ -38,7 +47,7 @@ export default function ListItens () {
               />
               <h2>por {formatMoney(Number(item.price))}</h2>
               <span>ou 10x de {formatMoney(Number(item.price / 10))}</span>
-              <Button>Comprar</Button>
+              <Button onClick={addToCart(item)}>Comprar</Button>
             </li>
           ))}
         </ListContent>

@@ -10,10 +10,11 @@ import { ProductsProvider } from "./context/ProductsContext";
 function App() {
   return (
     <ProductsProvider>
-      <Routes>
-        <Route index element={<Home />} />
-      </Routes>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
     </ProductsProvider>
+   
   )
 }
 

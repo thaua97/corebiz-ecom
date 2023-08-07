@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const NewslaterWrapper = styled.section`
+export const NewslaterWrapper = styled.form`
   position: relative;
   padding: 16px;
   width: 100%;

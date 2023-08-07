@@ -1,9 +1,10 @@
-import { ProductInterface } from "../types/interfaces"
+import { ProductsInterface } from "../types/interfaces"
 
-export function SaveLocalCart (item: ProductInterface[])  {
+export function SaveLocalCart (item: ProductsInterface[])  {
   return localStorage.LOCAL_CART = JSON.stringify(item);
 }
 
 export function getLocalCart () {
-  return JSON.parse(localStorage.LOCAL_CART);
+  const cart = localStorage.LOCAL_CART;
+  return cart ? JSON.parse(localStorage.LOCAL_CART) : [] ;
 }

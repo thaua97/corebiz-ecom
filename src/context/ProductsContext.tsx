@@ -15,7 +15,7 @@ export const ProductsContext = createContext<ProductsContextData>({} as Products
 
 export function ProductsProvider({ children }: ProductsContextProviderProps) {
   const [products, setProducts] = useState<ProductsInterface[]>([]);
-
+  
   useEffect(() => {
     getProducts();
   }, []);
