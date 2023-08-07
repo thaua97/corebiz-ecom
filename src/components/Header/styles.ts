@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.header`
     height: 24px;
   }
 
-  @media only screen and ${({theme}) => theme.devices.md} {
+  @media only screen and ${({theme}) => theme.devices.tablet} {
     img {
 
     }

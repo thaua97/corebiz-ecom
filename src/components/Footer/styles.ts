@@ -15,7 +15,7 @@ export const FooterWrapper = styled.div`
   flex-direction: column;
  
 
-  @media only screen and ${({theme}) => theme.devices.md} {
+  @media only screen and ${({theme}) => theme.devices.tablet} {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -36,7 +36,7 @@ export const FooterContent = styled.div`
     color: ${({theme}) => theme.colors.neutral}
   }
 
-  @media only screen and ${({theme}) => theme.devices.md} {
+  @media only screen and ${({theme}) => theme.devices.tablet} {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -49,7 +49,7 @@ export const FooterButtons = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and ${({theme}) => theme.devices.md} {
+  @media only screen and ${({theme}) => theme.devices.tablet} {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;

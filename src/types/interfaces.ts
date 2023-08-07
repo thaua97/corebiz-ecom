@@ -3,7 +3,7 @@ export interface UserInterface {
   email: string;
 }
 
-export interface ProductInterface {
+export interface ProductsInterface {
   id: number;
   title: string;
   price: number;

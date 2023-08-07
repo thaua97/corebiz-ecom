@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
-import ListItens from "../../components/ListItens";
+import ProductList from "../../components/ProductList";
 import Newslatter from "../../components/Newslatter";
 
 export default function Home () {
@@ -9,7 +9,7 @@ export default function Home () {
     <>
       <Header/>
       <Banner />
-      <ListItens />
+      <ProductList />
       <Newslatter />
       <Footer />
     </>

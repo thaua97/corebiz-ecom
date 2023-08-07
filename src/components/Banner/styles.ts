@@ -35,7 +35,7 @@ export const BannerBackground = styled.img<Props>`
   z-index: 0;
   object-fit: cover;
 
-  @media only screen and ${({theme}) => theme.devices.md} {
+  @media only screen and ${({theme}) => theme.devices.tablet} {
     display: ${(props) => props.mobile ? 'none' : 'block'};
   }
 `;
