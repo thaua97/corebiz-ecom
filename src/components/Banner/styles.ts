@@ -14,16 +14,31 @@ export const BannerContent = styled.div`
   position: absolute;
   padding: 30px 20px 20px;
 
+  @media only screen and ${({theme}) => theme.devices.tablet} {
+    padding: 5% 20%;
+  }
+
   h1 {
     color: ${({theme}) => theme.colors.neutral};
     font-weight: 900;
     font-size: 30px;
+
+    @media only screen and ${({theme}) => theme.devices.tablet} {
+      font-size: 45px;
+      text-align: left;
+      max-width: 500px;
+    }
   }
 
   h3 { 
     color: ${({theme}) => theme.colors.neutral};
     font-weight: 600;
     font-size: 20px;
+
+    @media only screen and ${({theme}) => theme.devices.tablet} {
+      font-size: 30px;
+      text-align: left;
+    }
   }
 `;
 
@@ -37,5 +52,6 @@ export const BannerBackground = styled.img<Props>`
 
   @media only screen and ${({theme}) => theme.devices.tablet} {
     display: ${(props) => props.mobile ? 'none' : 'block'};
+    height: 430px;
   }
 `;

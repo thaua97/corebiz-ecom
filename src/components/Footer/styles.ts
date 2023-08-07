@@ -13,12 +13,12 @@ export const FooterWrapper = styled.div`
   max-width: 1120px;
   display: flex;
   flex-direction: column;
- 
 
   @media only screen and ${({theme}) => theme.devices.tablet} {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 `;
 
@@ -33,28 +33,30 @@ export const FooterContent = styled.div`
     line-height: 24px;
     font-size: 12px;
     font-weight: 400;
-    color: ${({theme}) => theme.colors.neutral}
+    color: ${({theme}) => theme.colors.neutral};
+
+     @media only screen and ${({theme}) => theme.devices.tablet} {
+      width: 100%;
+    }
   }
 
   @media only screen and ${({theme}) => theme.devices.tablet} {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
   }
-`
+`;
 
 export const FooterButtons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 0 45px;
 
   @media only screen and ${({theme}) => theme.devices.tablet} {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+      width: 100%;
+      padding: 0 10%
   }
-`
+`;
 
 export const FooterBrands = styled.div`
   margin: 0 auto;
@@ -67,5 +69,11 @@ export const FooterBrands = styled.div`
 
   img {
     width: 78px;
+  }
+
+  @media only screen and ${({theme}) => theme.devices.tablet} {
+    width: 100%;
+    padding: 0;
+    justify-content: space-evenly;
   }
 `;

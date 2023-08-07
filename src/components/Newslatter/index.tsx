@@ -1,7 +1,9 @@
 import { FormEvent, useState } from 'react';
-import { NewslaterWrapper } from './styes';
+import { NewslaterWrapper, NewslaterFormGroup } from './styes';
 import { Button } from '../Button';
 import api from '../../services/api';
+
+import { toast } from 'react-toastify';
 
 export default function Newslatter() {
   const [ name, setName ] = useState<string>('')
@@ -17,35 +19,39 @@ export default function Newslatter() {
     event.preventDefault();
     
     try {
-      const 
-        res = await api.post('/users', {
+        await api.post('/users', {
           name,
           email
         }),
-        scc = res.data;
       
+        toast.success(`${name} seu cadastro com o email ${email} foi um sucesso !`, {
+          position: toast.POSITION.TOP_CENTER
+        });
       clearForm()
-      console.log(scc)
     } catch (error) {
-      console.error(error)
+      toast.error("erro ao enviar email", {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
       
   }
   return (
-    <NewslaterWrapper onSubmit={handleNewsLatterSubmit}>
+    <NewslaterWrapper>
       <h1>Participe de nossas news com promoções e novidades!</h1>
-      <input
-        placeholder="Digite seu nome"
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Digite seu email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-      />
-      <Button type="submit" secondary={false}>Eu quero!</Button>
+      <NewslaterFormGroup onSubmit={handleNewsLatterSubmit}>
+        <input
+          placeholder="Digite seu nome"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Digite seu email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+        <Button type="submit" secondary={false}>Eu quero!</Button>
+      </NewslaterFormGroup>
     </NewslaterWrapper>
   );
 }

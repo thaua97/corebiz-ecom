@@ -16,7 +16,7 @@ export const Heading = styled.h2<Props>`
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 60%;
+    right: 80%;
     background: ${({ light, theme}) => light ? theme.colors.neutral : theme.colors.black};
     height: 2px;
   }

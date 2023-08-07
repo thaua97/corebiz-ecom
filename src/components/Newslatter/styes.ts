@@ -7,16 +7,34 @@ export const NewslaterWrapper = styled.form`
   width: 100%;
   margin: 0 auto;
   max-width: 1120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   
   h1 {
     padding: 24px 0;
     font-weight: 700;
     font-size: 22px;
     color: ${({theme}) => theme.colors.smoke};
+  }
+`;
+
+export const NewslaterFormGroup = styled.form`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  @media only screen and ${({theme}) => theme.devices.tablet} {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    height: 100%;
+    
+    button {
+      margin: 0;
+      height: 48px;
+    }
   }
 
   input {
@@ -43,6 +61,11 @@ export const NewslaterWrapper = styled.form`
 
     & + input {
       margin-top: 1rem;
+      
+      @media only screen and ${({theme}) => theme.devices.tablet} {
+        margin-top:0;
+      }
     }
+
   }
 `;

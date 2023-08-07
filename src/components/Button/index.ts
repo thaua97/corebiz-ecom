@@ -11,11 +11,12 @@ export const Button = styled.button<Props>`
   font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: ${(props) => props.secondary ? 'flex-start' :  'center'};
+  justify-content: center;
   color: ${(props) => props.secondary ? props.theme.colors.black : props.theme.colors.neutral} ;
   background-color: ${(props) => props.secondary ? props.theme.colors.neutral : props.theme.colors.black} ;
   border-radius: 6px;
   text-transform: uppercase;
+  text-align: left;
 
   svg {
     margin-right: 10px;
