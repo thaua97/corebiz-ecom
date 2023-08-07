@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 interface Props {
-  secondary: boolean
+  secondary?: boolean
 }
 
 export const Button = styled.button<Props>`
@@ -16,8 +16,6 @@ export const Button = styled.button<Props>`
   background-color: ${(props) => props.secondary ? props.theme.colors.neutral : props.theme.colors.black} ;
   border-radius: 6px;
   text-transform: uppercase;
-
- 
 
   svg {
     margin-right: 10px;

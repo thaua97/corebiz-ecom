@@ -12,7 +12,7 @@ export default function Footer () {
       <FooterContainer>
         <FooterWrapper> 
           <FooterContent>
-            <Heading>Localização</Heading>
+            <Heading light>Localização</Heading>
             <p>Avenida Andrômeda, 2000. Bloco 6 e 8 <br/> Alphavile SP</p>
             <p>brasil@corebiz.ag</p>
             <p>+55 11 3090 1039</p>
