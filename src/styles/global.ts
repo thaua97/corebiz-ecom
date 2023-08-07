@@ -3,7 +3,7 @@ import { theme } from './theme';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;500;700;900&display=swap');
     
     * {
         margin: 0;

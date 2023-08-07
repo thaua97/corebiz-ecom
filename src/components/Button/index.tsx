@@ -1,8 +1,9 @@
 import React from 'react';
 import { ButtonWrapper } from './styles';
 
-export default function Button() {
+
+export default function Button({ children }, secondary: boolean) {
   return (
-    <ButtonWrapper>teste</ButtonWrapper>
+    <ButtonWrapper secondary={secondary}>{children}</ButtonWrapper>
   )
 }

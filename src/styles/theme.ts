@@ -21,7 +21,7 @@ export const theme = {
   size: {
     tine: '14px',
   },
-  device: {
+  devices: {
     mobileS: `(min-width: ${brakepoints.mobileS})`,
     mobileM: `(min-width: ${brakepoints.mobileM})`,
     mobileL: `(min-width: ${brakepoints.mobileL})`,
