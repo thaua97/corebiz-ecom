@@ -4,7 +4,7 @@ interface Props {
 }
 
 export const Button = styled.button<Props>`
-  width: 200px;
+  width: 100%;
   margin: 8px 0;
   padding: 8px 18px ;
   font-size: 12px;

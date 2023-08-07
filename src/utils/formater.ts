@@ -1,4 +1,6 @@
-export const { format: formatPrice } = new Intl.NumberFormat('pt-BR', {
-  style: 'currency',
-  currency: 'BRL'
-});
+export function formatMoney(value: number | bigint) {
+  return new Intl.NumberFormat('pt-BR', {
+    style:  'currency',
+    currency: 'BRL',
+  }).format(value);
+}

@@ -14,6 +14,7 @@ export const theme = {
     primary: '#F8475F',
     smoke: '#333333',
     gray: '#585858',
+    cloud: '#7A7A7A',
     background: '#F2F2F2',
     black: '#000',
     neutral: '#fff',
